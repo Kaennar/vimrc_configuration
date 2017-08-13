@@ -1,6 +1,52 @@
 " Configuration file for neovim allows us to add some slightly less idiotic
 " behaviours to the editor we can aparently not do without
 
+
+" Configuration for the Vim-Plug plugin manager
+" Uses the folder :: ~/.local/share/nvim/plugged/ to store all of the plugins
+" When installing MAKE SURE to use the above file
+
+" Start the plugin commands
+call plug#begin('~/.local/share/nvim/plugged/')
+  " Insert Plugins here
+
+  " Completion Engine for C/C++/Python
+  Plug 'Valloric/YouCompleteMe'
+  "**Remeber to follow directions on the readme to finish the installation
+
+  
+  " Molokayo Colour Scheme installation
+  "   |-> Molokai dependency
+  Plug 'tomasr/molokai'
+  " Colour Scheme
+  Plug 'fmoralesc/molokayo'
+
+
+  " GruvBox Colour Scheme
+  Plug 'morhetz/gruvbox'
+
+
+  " VCS Signification for Add/Remove lines
+  " Plug 'mhinz/vim-signify'
+  
+
+  " Vim Airline Support
+  Plug 'vim-airline/vim-airline'
+
+  "GitGutter 
+  Plug 'airblade/vim-gitgutter' 
+
+  "Nerd Tree
+  Plug 'scrooloose/nerdtree'
+  
+call plug#end()
+
+
+" Set the Colour Scheme
+colorscheme gruvbox
+set background=dark
+let g:airline_theme = 'gruvbox'
+
 set showcmd             " Show (partial) command in status line.
 set showmatch           " Show matching brackets.
 set showmode            " Show current mode.
