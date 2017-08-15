@@ -41,6 +41,10 @@ call plug#begin('~/.local/share/nvim/plugged/')
   
 call plug#end()
 
+" Set the update time to 250 ms so git gutter works properly
+set updatetime=250
+
+
 
 " Set the Colour Scheme
 colorscheme gruvbox
@@ -67,6 +71,15 @@ set nojoinspaces        " Prevents inserting two spaces after punctuation on a j
 " More natural splits
 set splitbelow          " Horizontal split below current.
 set splitright          " Vertical split to right of current.
+
+" More natural splitting using the arrow keys
+nnoremap <silent> <C-Right> <c-w>l
+nnoremap <silent> <C-Left> <c-w>h
+nnoremap <silent> <C-Up> <c-w>k
+nnoremap <silent> <C-Down> <c-w>j
+
+
+
 
 if !&scrolloff
   set scrolloff=3       " Show next 3 lines while scrolling.
